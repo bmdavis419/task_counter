@@ -17,13 +17,16 @@ COPY . .
 RUN bun run build
 
 # Start fresh with a new base image for smaller final size
-FROM oven/bun:1.0
+FROM builder AS release
 
 WORKDIR /app
 
 # Copy built application from builder stage
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package.json ./
+
+# Install only production dependencies
+RUN bun install --production
 
 # Expose the port the app runs on
 EXPOSE ${PORT:-3000}
