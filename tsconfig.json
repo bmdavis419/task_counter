@@ -8,7 +8,7 @@
     "jsx": "react-jsx",
     "allowJs": true,
 
-    "rootDirs": ["./src", "./api"],
+    "rootDirs": ["./src"],
 
     // Bundler mode
     "moduleResolution": "bundler",
@@ -26,5 +26,5 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
   },
-  "include": ["src/**/*", "api/**/*"]
+  "include": ["src/**/*"]
 }
