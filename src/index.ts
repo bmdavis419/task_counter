@@ -7,7 +7,7 @@ async function start() {
   const portNumber = parseInt(port);
 
   try {
-    await app.listen({ port: portNumber });
+    await app.listen({ port: portNumber, host: "0.0.0.0" });
     console.log(`Server running at http://localhost:${portNumber}`);
   } catch (err) {
     app.log.error(err);
