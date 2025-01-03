@@ -31,5 +31,7 @@ RUN bun install --production
 # Expose the port the app runs on
 EXPOSE ${PORT:-3000}
 
+RUN ls
+
 # Start the application
-CMD ["bun", "run", "start"]
+CMD ["bun", "run", "./dist/index.js"]
