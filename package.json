@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "bun --watch src/index.ts",
     "build": "bun build ./src/index.ts --target=bun --outdir=dist",
-    "vercel-build": "bun run build"
+    "start": "bun run ./dist"
   },
   "devDependencies": {
     "@types/bun": "latest"
