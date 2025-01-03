@@ -25,9 +25,6 @@ WORKDIR /app
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package.json ./
 
-# Install only production dependencies
-RUN bun install --production
-
 # Expose the port the app runs on
 EXPOSE ${PORT:-3000}
 
